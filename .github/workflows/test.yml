@@ -11,7 +11,7 @@ jobs:
       versions: ${{steps.get_versions.outputs.versions}}
     steps:
       - id: get_versions
-        uses: massongit/actions-get-node-active-major-versions@add_actions_4
+        uses: massongit/actions-get-node-active-major-versions@v1
   test:
     name: "Test on Node.js ${{ matrix.node-version }} x ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
