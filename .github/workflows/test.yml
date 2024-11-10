@@ -22,5 +22,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install
         run: yarn install
+      - run: yarn run build
+      - run: npm run dist chrome
+        working-directory: packages/webextension
       - name: Test
         run: yarn test
