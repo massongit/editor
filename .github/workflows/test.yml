@@ -10,7 +10,6 @@ jobs:
     outputs:
       versions: ${{steps.get_versions.outputs.versions}}
     steps:
-      - uses: actions/checkout@v4
       - id: get_versions
         uses: massongit/actions-get-node-active-major-versions@add_actions_4
   test:
