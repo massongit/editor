@@ -16,7 +16,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
         with:
-          ref: 4678a3c956e74bc3516ce339c6eaffa4b369ea32 # v0.12.1
+          ref: 75abe354d1e1d26708bc222ca781467939d3c2ce
       - name: setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
