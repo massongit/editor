@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        node-version: [ 12, 14 ]
+        node-version: [ 12, 14, 16 ]
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -20,3 +20,6 @@ jobs:
         run: yarn install
       - name: Test
         run: yarn test
+      - run: yarn run build
+      - run: npm run dist chrome
+        working-directory: packages/webextension/
