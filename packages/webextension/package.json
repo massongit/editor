@@ -34,7 +34,7 @@
         "@textlint/script-parser": "^0.17.0",
         "@textlint/types": "^14.0.4",
         "codemirror": "^5.59.2",
-        "comlink": "^4.3.0",
+        "comlink": "^4.4.2",
         "comlink-extension": "^1.0.8",
         "enable-webcomponents-in-content-scripts": "^1.0.7",
         "idb": "^5.0.4",
