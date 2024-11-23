@@ -66,68 +66,98 @@ const useForm = (props: ScriptMetaProps) => {
         () => ({
             name: (value: string) => {
                 setNamespace(value);
-                setErrors((prevState) => {
-                    return {
-                        ...prevState,
-                        name: value.length === 0 ? new Error("name length should be > 0") : null
-                    };
-                });
+                setErrors(
+                    (
+                        prevState: Partial<
+                            Record<"name" | "namespace" | "matchPattern" | "ext" | "textlintrc", Error | null>
+                        >
+                    ) => {
+                        return {
+                            ...prevState,
+                            name: value.length === 0 ? new Error("name length should be > 0") : null
+                        };
+                    }
+                );
             },
             namespace: (value: string) => {
                 setNamespace(value);
-                setErrors((prevState) => {
-                    return {
-                        ...prevState,
-                        namespace: value.length === 0 ? new Error("namespace length should be > 0") : null
-                    };
-                });
+                setErrors(
+                    (
+                        prevState: Partial<
+                            Record<"name" | "namespace" | "matchPattern" | "ext" | "textlintrc", Error | null>
+                        >
+                    ) => {
+                        return {
+                            ...prevState,
+                            namespace: value.length === 0 ? new Error("namespace length should be > 0") : null
+                        };
+                    }
+                );
             },
             matchPattern: (value: string) => {
                 setMatchPattern(value);
-                setErrors((prevState) => {
-                    return {
-                        ...prevState,
-                        matchPattern: value.length === 0 ? new Error("matchPattern length should be > 0") : null
-                    };
-                });
+                setErrors(
+                    (
+                        prevState: Partial<
+                            Record<"name" | "namespace" | "matchPattern" | "ext" | "textlintrc", Error | null>
+                        >
+                    ) => {
+                        return {
+                            ...prevState,
+                            matchPattern: value.length === 0 ? new Error("matchPattern length should be > 0") : null
+                        };
+                    }
+                );
             },
             ext: (value: string) => {
                 setExt(value);
-                setErrors((prevState) => {
-                    if (value.length === 0) {
+                setErrors(
+                    (
+                        prevState: Partial<
+                            Record<"name" | "namespace" | "matchPattern" | "ext" | "textlintrc", Error | null>
+                        >
+                    ) => {
+                        if (value.length === 0) {
+                            return {
+                                ...prevState,
+                                ext: new Error("ext length should be > 0")
+                            };
+                        }
+                        if (!value.startsWith(".")) {
+                            return {
+                                ...prevState,
+                                ext: new Error("ext should starts with '.'")
+                            };
+                        }
                         return {
                             ...prevState,
-                            ext: new Error("ext length should be > 0")
+                            ext: null
                         };
                     }
-                    if (!value.startsWith(".")) {
-                        return {
-                            ...prevState,
-                            ext: new Error("ext should starts with '.'")
-                        };
-                    }
-                    return {
-                        ...prevState,
-                        ext: null
-                    };
-                });
+                );
             },
             textlintrc: (value: string) => {
                 setTextlintrc(value);
-                setErrors((prevState) => {
-                    try {
-                        JSON.parse(value);
-                        return {
-                            ...prevState,
-                            textlintrc: value.length === 0 ? new Error("textlintrc length should be > 0") : null
-                        };
-                    } catch (error) {
-                        return {
-                            ...prevState,
-                            textlintrc: error instanceof Error ? error : null
-                        };
+                setErrors(
+                    (
+                        prevState: Partial<
+                            Record<"name" | "namespace" | "matchPattern" | "ext" | "textlintrc", Error | null>
+                        >
+                    ) => {
+                        try {
+                            JSON.parse(value);
+                            return {
+                                ...prevState,
+                                textlintrc: value.length === 0 ? new Error("textlintrc length should be > 0") : null
+                            };
+                        } catch (error) {
+                            return {
+                                ...prevState,
+                                textlintrc: error instanceof Error ? error : null
+                            };
+                        }
                     }
-                });
+                );
             }
         }),
         []
