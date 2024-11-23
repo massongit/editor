@@ -32,7 +32,7 @@
         "@spectrum-icons/workflow": "^4.2.16",
         "@textlint/config-loader": "^14.0.4",
         "@textlint/script-parser": "^0.17.0",
-        "@textlint/types": "^14.3.0",
+        "@textlint/types": "^14.0.4",
         "codemirror": "^6.0.1",
         "comlink": "^4.4.2",
         "comlink-extension": "^1.0.8",
