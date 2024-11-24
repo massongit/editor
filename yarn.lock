@@ -13163,9 +13163,9 @@ webpack-sources@^3.2.3:
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
 webpack-watched-glob-entries-plugin@^2.2.4:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/webpack-watched-glob-entries-plugin/-/webpack-watched-glob-entries-plugin-2.2.6.tgz#868bd203fef1d05fc1e898ba96e027c06a7f06dc"
-  integrity sha512-P1e6oMwB7PB7X4DZVavtowWOSk35Rp9lSxTzcPghbYzpgbmEFaqXkzA1GMLXU1JC5bnOyyV3ZkoGy/Owil44AQ==
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/webpack-watched-glob-entries-plugin/-/webpack-watched-glob-entries-plugin-2.2.4.tgz#32722c942d195df25042ec480760c48353b838d2"
+  integrity sha512-yOEHAVmOjpwbdoNUjTsjVrXsgO5oH7fKzNAWndmUqckr2F2RsERdW7GjVpgysv8mpEiPnEp5TTQQfaGySSUEqg==
   dependencies:
     glob "^7.1.6"
     glob-parent ">=6.0.1"
