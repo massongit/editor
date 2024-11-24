@@ -14,19 +14,13 @@ const canLog = () => {
     return process.env.NODE_ENV === "development" || enabledDebugLocation || enabledDebugStorage;
 };
 export const logger = {
-    log(
-        // @ts-ignore
-        ...args: any[]
-    ) {
+    log(...args: any[]) {
         if (!canLog()) {
             return;
         }
         console.log("[@textlint/editor]", ...args);
     },
-    error(
-        // @ts-ignore
-        ...args: any[]
-    ) {
+    error(...args: any[]) {
         if (!canLog()) {
             return;
         }
