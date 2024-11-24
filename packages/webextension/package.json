@@ -38,7 +38,7 @@
         "comlink-extension": "^1.0.8",
         "enable-webcomponents-in-content-scripts": "^1.0.7",
         "idb": "^8.0.0",
-        "minimatch": "^9.0.5",
+        "minimatch": "^3.0.4",
         "react": "^18.3.1",
         "react-codemirror2": "^8.0.0",
         "react-dom": "^18.3.1",
