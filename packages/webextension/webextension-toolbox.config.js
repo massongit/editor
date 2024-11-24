@@ -13,6 +13,10 @@ module.exports = {
             path.resolve("app", "?(scripts)/*.{js,mjs,jsx,ts,tsx}")
         ]);
         config.module.rules.push({
+            test: /\.tsx?$/,
+            loader: "ts-loader"
+        });
+        config.module.rules.push({
             test: /\.css$/i,
             use: ["style-loader", "css-loader"]
         });
