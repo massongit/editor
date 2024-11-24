@@ -17,7 +17,7 @@
         "copy-webpack-plugin": "9.0.1",
         "css-loader": "^6.11.0",
         "path-browserify": "^1.0.1",
-        "style-loader": "^4.0.0",
+        "style-loader": "^1.2.1",
         "ts-loader": "^9.5.1",
         "@webextension-toolbox/webextension-toolbox": "^7.1.1",
         "webpack": "^5.96.1",
