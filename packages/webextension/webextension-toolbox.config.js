@@ -38,9 +38,6 @@ module.exports = {
                 )
             })
         );
-        config.stats = {
-            errorDetails: true
-        };
         // Important: return the modified config
         return config;
     },
