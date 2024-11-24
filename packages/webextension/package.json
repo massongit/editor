@@ -19,7 +19,7 @@
         "path-browserify": "^1.0.1",
         "style-loader": "^1.2.1",
         "ts-loader": "^8.4.0",
-        "webextension-toolbox": "^4.0.3",
+        "@webextension-toolbox/webextension-toolbox": "^7.1.1",
         "webpack": "5.42.0",
         "webpack-sources": "^2.3.0",
         "webpack-watched-glob-entries-plugin": "^2.1.9"
