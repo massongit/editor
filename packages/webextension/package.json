@@ -20,7 +20,7 @@
         "style-loader": "^1.2.1",
         "ts-loader": "^9.5.1",
         "@webextension-toolbox/webextension-toolbox": "^7.1.1",
-        "webpack": "^5.96.1",
+        "webpack": "5.42.0",
         "webpack-sources": "^2.3.0",
         "webpack-watched-glob-entries-plugin": "^2.1.9"
     },
