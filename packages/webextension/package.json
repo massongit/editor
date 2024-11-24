@@ -22,7 +22,7 @@
         "@webextension-toolbox/webextension-toolbox": "^7.1.1",
         "webpack": "^5.96.1",
         "webpack-sources": "^3.2.3",
-        "webpack-watched-glob-entries-plugin": "^3.0.0"
+        "webpack-watched-glob-entries-plugin": "^2.1.9"
     },
     "dependencies": {
         "@adobe/react-spectrum": "3.17.0",
