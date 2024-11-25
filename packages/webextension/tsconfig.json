@@ -14,7 +14,6 @@
       "esnext",
       "dom"
     ],
-    "baseUrl": "./",
     /* Strict Type-Checking Options */
     "strict": true,
     /* Additional Checks */
