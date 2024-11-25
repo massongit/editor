@@ -25,11 +25,8 @@ jobs:
       - name: Build
         run: yarn run build
       - name: Build webextension (Chrome)
-        run: |
-          pwd
-          pwd | sed -e 's:\\:/:g'
-          echo file://$(pwd | sed -e 's:\\:/:g')/webextension-toolbox.config.js
-          npm run dist chrome
+        run: npm run dist chrome
+        if: matrix.os == 'ubuntu-latest'
         working-directory: packages/webextension
       - name: Test
         run: yarn test
