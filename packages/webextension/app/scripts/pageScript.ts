@@ -71,6 +71,9 @@ const lintEngine: LintEngineAPI = {
         ignoreSet.add(getMatchText(text, message));
         ignoreMarkMap.set(message.ruleId, ignoreSet);
         return true;
+    },
+    async getScripts() {
+        throw new Error("No Implement");
     }
 };
 const isHTMLTextAreaElement = (element: Element): element is HTMLTextAreaElement => {

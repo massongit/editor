@@ -5,6 +5,18 @@ import type { TextCheckerElementRectItem } from "./text-checker-store";
 import pDebounce from "p-debounce";
 import { debug } from "./util/logger";
 
+export type Script = {
+    namespace: string;
+    name: string;
+    scriptUrl: string;
+    homepage: string;
+    version: string;
+    code: string;
+    ext: string;
+    textlintrc: string;
+    matchPattern: string;
+};
+
 const createCompositionHandler = () => {
     let onComposition = false;
     return {
@@ -31,6 +43,8 @@ export type LintEngineAPI = {
     ignoreText({ text, message }: { text: string; message: TextlintMessage }): Promise<boolean>;
     // merge config and update
     mergeConfig?({ textlintrc }: { textlintrc: string }): Promise<void>;
+    // Get scripts
+    getScripts(): Promise<Script[]>;
 };
 
 export type AttachTextAreaParams = {

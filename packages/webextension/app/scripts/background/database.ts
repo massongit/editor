@@ -1,27 +1,10 @@
 import { kvsEnvStorage } from "@kvs/env";
 import minimatch from "minimatch";
-
-export type Script = {
-    namespace: string;
-    name: string;
-    scriptUrl: string;
-    homepage: string;
-    version: string;
-    code: string;
-    ext: string;
-    textlintrc: string;
-    matchPattern: string;
-};
+import type { Script } from "textchecker-element";
+import { keyOfScript } from "../utils/script";
 
 export type TextlintDBSchema = {
     scripts: Script[];
-};
-/**
- * Create unique key of Script
- * @param script
- */
-export const keyOfScript = (script: { name: string; namespace: string }): string => {
-    return `${script.namespace}@${script.name}`;
 };
 const equalScript = (a: { name: string; namespace: string }, b: { name: string; namespace: string }): boolean => {
     return keyOfScript(a) === keyOfScript(b);

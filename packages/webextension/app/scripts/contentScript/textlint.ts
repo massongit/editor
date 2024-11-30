@@ -1,5 +1,5 @@
 import type { TextlintFixResult, TextlintMessage, TextlintResult } from "@textlint/types";
-import type { LintEngineAPI } from "textchecker-element";
+import type { LintEngineAPI, Script } from "textchecker-element";
 import {
     TextlintWorkerCommandFix,
     TextlintWorkerCommandLint,
@@ -7,7 +7,6 @@ import {
     TextlintWorkerCommandResponse
 } from "@textlint/script-compiler";
 import type { TextlintRcConfig } from "@textlint/config-loader";
-import { Script } from "./database";
 import { logger } from "../utils/logger";
 
 const waiterForInit = (worker: Worker) => {
@@ -150,6 +149,9 @@ export const createTextlintWorker = (script: Script) => {
                     });
                 },
                 ignoreText(): Promise<boolean> {
+                    throw new Error("No implement");
+                },
+                getScripts(): Promise<Script[]> {
                     throw new Error("No implement");
                 }
             };
