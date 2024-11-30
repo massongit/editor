@@ -1,9 +1,9 @@
 // src/contexts/AppStateContext.tsx
 import React, { Dispatch, SetStateAction, useContext, useState } from "react";
-import { browser } from "webextension-polyfill-ts";
+import browser from "webextension-polyfill";
 import * as Comlink from "comlink";
-import { forward } from "comlink-extension";
-import { BackgroundToPopupObject } from "../background";
+import { forward } from "../../../comlink-extension/src";
+import { BackgroundToPopupObject } from "../service_worker";
 const { port1, port2 } = new MessageChannel();
 forward(port1, browser.runtime.connect());
 // content-script <-> background page

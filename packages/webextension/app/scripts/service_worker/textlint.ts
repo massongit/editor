@@ -1,5 +1,6 @@
 import type { TextlintFixResult, TextlintMessage, TextlintResult } from "@textlint/types";
 import type { LintEngineAPI } from "textchecker-element";
+import browser from "webextension-polyfill";
 import {
     TextlintWorkerCommandFix,
     TextlintWorkerCommandLint,
@@ -123,7 +124,7 @@ export const createTextlintWorker = (script: Script) => {
     };
     const mergeConfig = async ({ textlintrc }: { textlintrc: TextlintRcConfig }): Promise<void> => {
         return new Promise((resolve, _reject) => {
-            setTimeout(() => {
+            browser.alarms.onAlarm.addListener(() => {
                 resolve();
             });
             return workerRef.current.postMessage({

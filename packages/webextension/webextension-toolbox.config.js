@@ -30,12 +30,12 @@ module.exports = {
                     Math.random()
                         .toString(36)
                         .replace(/[^a-z]+/g, "")
-                        .substr(0, 32)
+                        .substring(0, 32)
                 )
             })
         );
         // Important: return the modified config
         return config;
     },
-    copyIgnore: ["**/*.js", "**/*.json", "**/*.ts", "**/*.tsx"]
+    copyIgnore: ["**/*.js", "**/*.ts", "**/*.tsx"]
 };
