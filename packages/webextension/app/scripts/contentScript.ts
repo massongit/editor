@@ -2,7 +2,7 @@ import { LintEngineAPI } from "textchecker-element";
 import browser from "webextension-polyfill";
 import { createEndpoint } from "../../comlink-extension/src";
 import * as Comlink from "comlink";
-import type { BackgroundToContentObject } from "./service_worker";
+import type { BackgroundToContentObject } from "./background";
 import { nonRandomKey } from "./shared/page-contents-shared";
 import { logger } from "./utils/logger";
 

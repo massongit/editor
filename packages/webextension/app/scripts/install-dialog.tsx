@@ -1,6 +1,6 @@
 import { createEndpoint } from "../../comlink-extension/src";
 import * as Comlink from "comlink";
-import type { BackgroundToPopupObject } from "./service_worker";
+import type { BackgroundToPopupObject } from "./background";
 import browser from "webextension-polyfill";
 import { parseMetadata, TextlintScriptMetadata } from "@textlint/script-parser";
 import { logger } from "./utils/logger";

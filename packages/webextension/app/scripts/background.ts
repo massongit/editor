@@ -1,13 +1,13 @@
 import browser from "webextension-polyfill";
 import { createBackgroundEndpoint, isMessagePort } from "../../comlink-extension/src";
 import * as Comlink from "comlink";
-import { createTextlintWorker } from "./service_worker/textlint";
-import { keyOfScript, openDatabase, Script } from "./service_worker/database";
+import { createTextlintWorker } from "./background/textlint";
+import { keyOfScript, openDatabase, Script } from "./background/database";
 import { LintEngineAPI } from "textchecker-element";
 import { TextlintResult } from "@textlint/types";
-import { scriptWorkerSet } from "./service_worker/scriptWorkerSet";
+import { scriptWorkerSet } from "./background/scriptWorkerSet";
 import { logger } from "./utils/logger";
-import { listenOnTextlintWorkerJsUrl } from "./service_worker/onTextlintWorker";
+import { listenOnTextlintWorkerJsUrl } from "./background/onTextlintWorker";
 
 async function openInstallDialog({ tabId, url }: { tabId: number; url: string }) {
     const installUrl = browser.runtime.getURL("/pages/install-dialog.html") + "?script=" + encodeURIComponent(url);
