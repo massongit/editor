@@ -8,4 +8,4 @@ export type {
     TextCheckerCardRect
 } from "./text-checker-popup-element";
 export { attachToTextArea } from "./attach-to-text-area";
-export type { LintEngineAPI, AttachTextAreaParams } from "./attach-to-text-area";
+export type { LintEngineAPI, AttachTextAreaParams, Script } from "./attach-to-text-area";
